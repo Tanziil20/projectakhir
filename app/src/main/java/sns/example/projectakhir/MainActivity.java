@@ -34,16 +34,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             etemail = findViewById(R.id.ptUsername);
             etpassword = findViewById(R.id.etPassword);
             Button login = findViewById(R.id.btnLogin);
+            login.setOnClickListener(this);
             Button register = findViewById(R.id.btnSignUp);
 
-            login.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, DashboardPembeli.class);
-                    startActivity(intent);
-                }
-            });
-
+//            login.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent(MainActivity.this, DashboardPembeli.class);
+//                    startActivity(intent);
+//                }
+//            });
+//
             register.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onClick(View view) {
             String email = etemail.getText().toString();
             String password = etpassword.getText().toString();
+
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
