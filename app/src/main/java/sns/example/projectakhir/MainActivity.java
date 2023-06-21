@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 // Login successful
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Toast.makeText(MainActivity.this, "Authentication success.", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(MainActivity.this, DashboardPembeli.class);
+                                Intent i = new Intent(MainActivity.this, DashboardPenjual.class);
                                 startActivity(i);
                                 // Proceed with your desired actions, such as navigating to the main activity
                             } else {

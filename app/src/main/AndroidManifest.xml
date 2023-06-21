@@ -11,9 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectAkhir"
         tools:targetApi="31">
-        <activity android:name=".RegisterPage"
+        <activity
+            android:name=".RegisterPage"
             android:exported="true"/>
-        <activity android:name=".DashboardPembeli"
+        <activity
+            android:name=".DashboardPembeli"
+            android:exported="true"/>
+        <activity
+            android:name=".DashboardPenjual"
             android:exported="true"/>
         <activity
             android:name=".MainActivity"
